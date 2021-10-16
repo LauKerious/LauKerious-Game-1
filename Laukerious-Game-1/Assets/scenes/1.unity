@@ -236,11 +236,11 @@ MonoBehaviour:
   m_GameObject: {fileID: 1750483196}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 19b53af7c6b2f0646ab41bff8a63087b, type: 3}
+  m_Script: {fileID: 11500000, guid: 53d0ccf85162c4c438a64f3410aae88b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   Camera: {fileID: 1935875528}
-  SpriteRenderer: {fileID: 1750483199}
+  SpriteRender: {fileID: 1750483199}
 --- !u!212 &1750483199
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -286,7 +286,7 @@ SpriteRenderer:
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 2
-  m_Size: {x: 18.612717, y: 10}
+  m_Size: {x: 1, y: 1}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
