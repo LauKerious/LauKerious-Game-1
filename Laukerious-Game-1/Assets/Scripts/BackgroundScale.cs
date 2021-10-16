@@ -12,8 +12,8 @@ public class BackgroundScale : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        float worldSpaceHeight = Camera.orthographicSize * 15;
-        float worldSpaceWidth = worldSpaceHeight * Camera.aspect;
+       float worldSpaceHeight = Camera.orthographicSize * 32;
+       float worldSpaceWidth = worldSpaceHeight * Camera.aspect*1.85f;
 
         SpriteRender.size = new Vector2(worldSpaceWidth, worldSpaceHeight);
 
@@ -22,9 +22,9 @@ public class BackgroundScale : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        float worldSpaceHeight = Camera.orthographicSize * 15;
-        float worldSpaceWidth = worldSpaceHeight * Camera.aspect;
+       float worldSpaceHeight = Camera.orthographicSize * 32;
+       float worldSpaceWidth = worldSpaceHeight * Camera.aspect*1.85f;
 
-        SpriteRender.size = new Vector2(worldSpaceWidth, worldSpaceHeight);
+      SpriteRender.size = new Vector2(worldSpaceWidth, worldSpaceHeight);
     }
 }
