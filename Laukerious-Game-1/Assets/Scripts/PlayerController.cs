@@ -3,44 +3,25 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class PlayerController : MonoBehaviour
-
 {
-    private Transform Player;
-    private float Vertical;
-    private float Horizontal;
-    [SerializeField] private float Movespeed = 8f;
-    private float Diagonalspeed = 0.7f;
+    public float moveSPeed = 5f;
+    public Rigidbody2D rb;
 
-    // Start is called before the first frame update
-    void Start()
-    {
-        Player = this.transform;
-        
-    }
-
+    private Vector2 movement;
+    public Animator animator;
     // Update is called once per frame
     void Update()
     {
-        input();  
+        movement.x = Input.GetAxisRaw("Horizontal");
+        movement.y = Input.GetAxisRaw("Vertical");
+
+        animator.SetFloat("Horizontal", movement.x);
+        animator.SetFloat("Vertical", movement.y);
+        animator.SetFloat("Speed", movement.sqrMagnitude);
     }
 
-    private void input()
+    private void FixedUpdate()
     {
-        Vertical = Input.GetAxis("Vertical");
-        Horizontal = Input.GetAxis("Horizontal");
-
-    }
-    private void Movespeeed()
-    {
-        float Horizontalspeed = Horizontal * Movespeed;
-        float Verticalspeed = Vertical * Movespeed;
-                    
-
-        if (Horizontal != 0 && Vertical != 0)
-        {
-            Player.position = new Vector2(Horizontalspeed * Diagonalspeed * Time.deltaTime, Verticalspeed * Diagonalspeed * Time.deltaTime);
-            
-         }
-
+        rb.MovePosition(rb.position + movement * moveSPeed * Time.fixedDeltaTime);
     }
 }
