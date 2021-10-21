@@ -15,7 +15,7 @@ public class BackgroundScale : MonoBehaviour
        float worldSpaceHeight = Camera.orthographicSize *2 ;
        float worldSpaceWidth = worldSpaceHeight * Camera.aspect;
 
-        SpriteRender.size = new Vector2(worldSpaceWidth /2, worldSpaceHeight);
+        SpriteRender.size = new Vector2(worldSpaceWidth , worldSpaceHeight);
          
     }
 
@@ -25,6 +25,6 @@ public class BackgroundScale : MonoBehaviour
        float worldSpaceHeight = Camera.orthographicSize *2 ;
        float worldSpaceWidth = worldSpaceHeight * Camera.aspect;
 
-      SpriteRender.size = new Vector2(worldSpaceWidth /2, worldSpaceHeight);
+      SpriteRender.size = new Vector2(worldSpaceWidth , worldSpaceHeight);
     }
 }
